@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite';
-//import alias from "@rollup/plugin-alias";
+import alias from '@rollup/plugin-alias';
 import react from '@vitejs/plugin-react';
 import electron from 'vite-plugin-electron/simple';
 
@@ -41,16 +41,16 @@ export default defineConfig(({ command }) => {
               outDir: 'dist-electron/',
               rollupOptions: {
                 external: Object.keys(pkg.dependencies || {}),
-                // plugins: [
-                //   alias({
-                //     entries: [
-                //       {
-                //         find: "@common",
-                //         replacement: path.join(__dirname, 'common')
-                //       },
-                //     ],
-                //   })
-                // ]
+                plugins: [
+                  alias({
+                    entries: [
+                      {
+                        find: "@common",
+                        replacement: path.join(__dirname, 'common')
+                      },
+                    ],
+                  })
+                ]
               },
             },
           },
@@ -64,16 +64,16 @@ export default defineConfig(({ command }) => {
               outDir: 'dist-electron/',
               rollupOptions: {
                 external: Object.keys(pkg.dependencies || {}),
-                // plugins: [
-                //   alias({
-                //     entries: [
-                //       {
-                //         find: "@common",
-                //         replacement: path.join(__dirname, 'common')
-                //       },
-                //     ],
-                //   })
-                // ]
+                plugins: [
+                  alias({
+                    entries: [
+                      {
+                        find: "@common",
+                        replacement: path.join(__dirname, 'common')
+                      },
+                    ],
+                  })
+                ]
               },
             },
           },
