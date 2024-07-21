@@ -1,4 +1,5 @@
-import robot, { keys } from '@hurdlegroup/robotjs';
+//import robot, { keys } from '@hurdlegroup/robotjs';
+import robot from '@hurdlegroup/robotjs';
 import log from 'electron-log/main';
 
 let lastMousePosition = { x: 0, y: 0 };
@@ -18,16 +19,27 @@ export function triggerShortcut(keyCombination: string) {
             return;
         }
         // 处理键盘快捷键
-        const keys = keyCombination.split('+') as keys[];
+        //const keys = keyCombination.split('+') as keys[];
+        const keyArray = keyCombination.split('+');
+        // const validModifiers = ['alt', 'right_alt', 'command', 'control', 'left_control', 'right_control', 'shift', 'right_shift', 'win'];
+        // const modifiers = keys.filter((key: string) => validModifiers.includes(key));
+        // const nonModifierKeys = keys.filter((key: string) => !validModifiers.includes(key));
+        // nonModifierKeys.forEach((key: keys, index: number) => {
+        //     robot.keyToggle(key, 'down', modifiers);
+        //     if (index === nonModifierKeys.length - 1) {
+        //         nonModifierKeys.forEach((key: keys) => robot.keyToggle(key, 'up', modifiers));
+        //     }
+        // });
         const validModifiers = ['alt', 'right_alt', 'command', 'control', 'left_control', 'right_control', 'shift', 'right_shift', 'win'];
-        const modifiers = keys.filter((key: string) => validModifiers.includes(key));
-        const nonModifierKeys = keys.filter((key: string) => !validModifiers.includes(key));
-        nonModifierKeys.forEach((key: keys, index: number) => {
+        const modifiers = keyArray.filter((key: string) => validModifiers.includes(key));
+        const nonModifierKeys = keyArray.filter((key: string) => !validModifiers.includes(key));
+        nonModifierKeys.forEach((key: string, index: number) => {
             robot.keyToggle(key, 'down', modifiers);
             if (index === nonModifierKeys.length - 1) {
-                nonModifierKeys.forEach((key: keys) => robot.keyToggle(key, 'up', modifiers));
+                nonModifierKeys.forEach((key: string) => robot.keyToggle(key, 'up', modifiers));
             }
         });
+
     } catch (error) {
         log.error('triggerShortcut', error);
     }

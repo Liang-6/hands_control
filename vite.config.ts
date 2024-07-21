@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite';
 
-// import alias from "@rollup/plugin-alias"; //删除，似乎已经不需要导入
+import alias from "@rollup/plugin-alias";
 import react from '@vitejs/plugin-react';
 import electron from 'vite-plugin-electron/simple';
 
