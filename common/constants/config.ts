@@ -1,3 +1,4 @@
+// 定义了左手和右手的手势图像路径
 export const HAND_IMG_PATHS: { left: string[]; right: string[] } = {
     left: [
         "Closed_Fist_Left",
@@ -15,6 +16,7 @@ export const HAND_IMG_PATHS: { left: string[]; right: string[] } = {
     ]
 };
 
+//定义了一些默认的快捷方式配置，每个快捷方式对应特定的手势组合和功能。
 export const DEFAULT_SHORTCUTS = [
     {
         keyCombination: "Mouse Scroll",
@@ -32,6 +34,7 @@ export const DEFAULT_SHORTCUTS = [
     }
 ];
 
+// 定义应用程序的默认配置
 export const DEFAULT_CONFIG = [
     {
         name: 'Global',
