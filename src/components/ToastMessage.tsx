@@ -4,7 +4,7 @@ interface MessageProps {
     message: string;
     onClose: () => void;
 }
-
+//用于显示一个短暂的提示消息，并在指定时间后自动关闭
 const ToastMessage: React.FC<MessageProps> = ({ message, onClose }) => {
     useEffect(() => {
         const timer = setTimeout(() => {

@@ -10,7 +10,7 @@ interface SoftwareCardProps {
     icon: string;
     name: string;
 }
-
+// 展示单个软件的卡片，提供删除软件配置和导航到软件设置页面的功能。
 const SoftwareCard: React.FC<SoftwareCardProps> = ({ icon, name }) => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
@@ -71,7 +71,7 @@ const SoftwareCard: React.FC<SoftwareCardProps> = ({ icon, name }) => {
         </div>
     );
 }
-
+// 展示全局设置的卡片，提供导航到全局设置页面的功能。
 const GlobalSoftwareCard: React.FC = () => {
     const navigate = useNavigate();
 

@@ -1,3 +1,4 @@
+// 此组件用于在用户界面中显示和管理快捷键设置卡片
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 

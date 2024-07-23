@@ -1,3 +1,4 @@
+// 这个组件用于显示和管理快捷键和手势绑定的设置模态窗口。用户可以在该窗口中输入快捷键组合，选择左手和右手的手势，并应用这些设置。
 import React, { useEffect, useRef, useState } from 'react';
 import { useParams } from 'react-router-dom';
 

@@ -10,7 +10,7 @@ import SoftwareModal from "@/components/SoftwareModal";
 import { PlusIcon } from "@heroicons/react/24/solid";
 
 import { AppConfig } from "@common/types/config";
-
+// 用户界面组件
 const Dashboard: React.FC = () => {
     const appsConfigs: AppConfig[] = useSelector((state: RootState) => state.config.apps);
     const [isModalOpen, setModalOpen] = useState(false);

@@ -1,3 +1,4 @@
+// 主窗口和摄像头窗口的控制栏。提供窗口最小化、关闭和其他特定功能的按钮。
 import { useState } from 'react';
 
 import { BarsArrowDownIcon, BarsArrowUpIcon, MinusIcon, XMarkIcon } from '@heroicons/react/24/solid';

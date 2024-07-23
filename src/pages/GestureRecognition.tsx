@@ -15,7 +15,7 @@ interface HandGestureData {
     handLandmarks: Landmark[];
     isLeftHand: boolean;
 }
-
+// 使用摄像头捕捉手势并识别手势，然后触发相应的快捷键操作。
 const GestureRecognition: React.FC = () => {
     const appConfigs: AppConfig[] = useSelector((state: RootState) => state.config.apps);
 

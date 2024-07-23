@@ -1,3 +1,4 @@
+// 在弹出模态框中添加新的软件配置。该组件允许用户上传软件图标并输入软件名称，最后提交配置。
 import React, { useRef, useState } from 'react';
 
 import { updateTimestamp } from '@/stores/configSlice';

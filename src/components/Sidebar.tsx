@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 import { BookOpenIcon, CameraIcon, XMarkIcon } from "@heroicons/react/24/solid";
 
+//显示一个包含版本信息的模态卡片
 const IntroCard: React.FC<{ onClose: () => void }> = ({ onClose }) => {
     const [version, setVersion] = useState("")
 
@@ -34,7 +35,8 @@ const IntroCard: React.FC<{ onClose: () => void }> = ({ onClose }) => {
         </div>
     );
 };
-
+// 固定在页面左侧的侧边栏，包含按钮以打开相机和显示 IntroCard
+// 这里我修改成不显示IntroCard了，没必要，我想点击了以后出现另一个功能待做
 const Sidebar: React.FC = () => {
     const [showCard, setShowCard] = useState(false);
     const handleCardOpen = () => setShowCard(true);
@@ -54,7 +56,7 @@ const Sidebar: React.FC = () => {
                 <BookOpenIcon className="w-10 h-10" />
             </button>
 
-            {showCard && <IntroCard onClose={handleCardClose} />}
+            {/* {showCard && <IntroCard onClose={handleCardClose} />} */}
         </div>
     );
 }

@@ -11,6 +11,7 @@ import { ArrowLeftIcon, PlusIcon } from '@heroicons/react/24/solid';
 
 import { AppConfig } from '@common/types/config';
 
+// 用于展示和管理应用配置的设置页面。该页面包括显示当前软件的快捷键配置，以及提供添加新快捷键的功能。
 const SettingPage: React.FC = () => {
     const { software } = useParams(); // 变量名必须和路由配置里一样
 
